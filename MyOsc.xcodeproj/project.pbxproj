@@ -11,6 +11,7 @@
 		3B3643852948BB2E00C33672 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3643842948BB2E00C33672 /* ContentView.swift */; };
 		3B3643872948BB3000C33672 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3643862948BB3000C33672 /* Assets.xcassets */; };
 		3B36438A2948BB3000C33672 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3643892948BB3000C33672 /* Preview Assets.xcassets */; };
+		3BE56EBB2948BF8D00AEF73E /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE56EBA2948BF8D00AEF73E /* AudioKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE56EBB2948BF8D00AEF73E /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = MyOsc;
+			packageProductDependencies = (
+				3BE56EBA2948BF8D00AEF73E /* AudioKit */,
+			);
 			productName = MyOsc;
 			productReference = 3B36437F2948BB2E00C33672 /* MyOsc.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 3B3643762948BB2E00C33672;
+			packageReferences = (
+				3BE56EB92948BF8D00AEF73E /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = 3B3643802948BB2E00C33672 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3BE56EB92948BF8D00AEF73E /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3BE56EBA2948BF8D00AEF73E /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE56EB92948BF8D00AEF73E /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B3643772948BB2E00C33672 /* Project object */;
 }

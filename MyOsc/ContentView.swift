@@ -6,16 +6,37 @@
 //
 
 import SwiftUI
+import AudioKit
+
+class OscGenerator {
+    let engine = AudioEngine()
+    let osc = PlaygroundOscillator()
+    var intialised: Bool = false
+    
+    func initalise() {
+        if !intialised {
+            intialised = true
+            osc.amplitude = 0.25
+            osc.frequency = 440
+            
+            engine.output = osc
+            
+            try! engine.start()
+        }
+    }
+    func togglesound() {
+        initalise()
+        osc.isStarted ? osc.stop() : osc.start()
+    }
+}
 
 struct ContentView: View {
+    let oscillator = OscGenerator()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        Button("PlaySound") {
+            oscillator.togglesound()
         }
-        .padding()
     }
 }
 
