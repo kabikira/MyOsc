@@ -38,7 +38,7 @@ struct SliderOscView: View {
             Text("現在の値:\(currentValue)")
             
             Slider(value: $currentValue,
-                   in: 0...2000,
+                   in: 0...3000,
                    step: 1.0,
                    onEditingChanged: { _ in
                 oscillator.xLocation = currentValue
@@ -49,11 +49,11 @@ struct SliderOscView: View {
             
             Button("play") {
                 oscillator.playSound()
-                print("おしたよ")
+                print("play")
             }
             Button("stop") {
                 oscillator.stopSound()
-                print("止めたよ")
+                print("stop")
             }
         }
         
