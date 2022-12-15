@@ -12,7 +12,8 @@ struct MyOscApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            TestView()
+//            TestView()
+            SliderOscView()
         }
     }
 }
